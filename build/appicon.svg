@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1d2b"/>
+      <stop offset="1" stop-color="#0b0c12"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#8fb0ff"/>
+      <stop offset="0.55" stop-color="#7c9cff"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.48" r="0.5">
+      <stop offset="0" stop-color="#7c9cff" stop-opacity="0.55"/>
+      <stop offset="0.6" stop-color="#7c9cff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#7c9cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#5f85ff" flood-opacity="0.45"/>
+    </filter>
+    <clipPath id="clip"><rect x="32" y="32" width="448" height="448" rx="112"/></clipPath>
+  </defs>
+
+  <!-- tile -->
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#bg)"/>
+  <g clip-path="url(#clip)">
+    <circle cx="256" cy="246" r="230" fill="url(#glow)"/>
+    <!-- faint terminal grid lines -->
+    <g stroke="#ffffff" stroke-opacity="0.035" stroke-width="2">
+      <path d="M32 160h448M32 256h448M32 352h448"/>
+      <path d="M160 32v448M256 32v448M352 32v448"/>
+    </g>
+  </g>
+  <rect x="33" y="33" width="446" height="446" rx="111" fill="none" stroke="url(#rim)" stroke-width="2"/>
+
+  <!-- bolt -->
+  <g filter="url(#shadow)">
+    <path d="M281 96 150 274h96l-15 142 131-178h-96l15-142z"
+          fill="url(#bolt)" stroke="#ffffff" stroke-opacity="0.35" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+  <!-- highlight on bolt -->
+  <path d="M281 96 150 274h40l106-152z" fill="#ffffff" fill-opacity="0.22"/>
+
+  <!-- prompt chevron dot: local/terminal cue -->
+  <circle cx="388" cy="396" r="22" fill="#4ade80" fill-opacity="0.95"/>
+  <circle cx="388" cy="396" r="30" fill="none" stroke="#4ade80" stroke-opacity="0.25" stroke-width="6"/>
+</svg>

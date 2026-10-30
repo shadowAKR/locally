@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Local Agent
+GenericName=Local AI assistant
+Comment=Chat with a local Ollama model that can run commands, manage files, read your email in its own browser and run scheduled tasks
+Exec=localagent
+Icon=localagent
+Terminal=false
+Categories=Utility;
+Keywords=AI;assistant;agent;ollama;chat;automation;
+StartupNotify=true
+StartupWMClass=localagent
